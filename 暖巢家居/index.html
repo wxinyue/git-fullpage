@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.section .one { 
+		font: 50px "Microsoft Yahei"; 
+		position: absolute;
+		width:500px;
+		left: 50%;
+		margin-left: -250px;
+		top: -60px;
+		color:#996666;
+	}
+
+	.section .five{
+		width: 100%;
+		
+	}
+	
+	.section .five img{
+		margin-left: 100px;
+		float: left;
+		width: 330px;
+		height: 500px;
+		
+	}
+
+	.fp-nav_p{
+	position: absolute;
+	left: 
+	}
+
+	body{
+	position: relative;
+	}
+	.gps{
+		position:fixed;
+		top: 0px;
+		right:30px;
+		z-index: 1;
+	}
+	
+	.gps ul{
+		width:430px;
+		height: 40px;
+		
+		
+	}
+	.gps ul .logo{
+		width: 110px;
+		height: 40px;
+		float: left;
+		
+	}
+	.gps ul .logo p{
+		font-family:Segoe Script;
+
+		font-weight: bold;
+		color:#CC3300;
+		font-size: 30px;
+		text-align: center;
+		line-height: 40px;
+	}
+	.gps ul li{
+		float: left;
+		width: 60px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	.gps ul li a{
+		font-size: 20px;
+		color: 	#CC3300;
+
+	}
+
+	.active{
+		border-radius:5px;
+		background-color:rgba(238,99,99,0.4);
+
+	}
+
+	</style>
+
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="jquery.fullPage.js"></script><!-- 全屏滚动插件-->
+	<link rel="stylesheet" href="jquery.fullPage.css"><!-- 全屏滚动样式 -->
+	<script src="jquery.SuperSlide2.js"></script><!-- 第二页插件 -->
+	<link rel="stylesheet" href="jquery.SuperSlide2.css" ><!-- 第二页插件样式 -->
+	<script src="sHover.js"></script><!-- 第三页插件 -->
+	<link rel="stylesheet" href="sHover.css" > <!-- 第三页插件样式 -->
+	<link rel="stylesheet" href="style.css" > <!-- 第四页插件样式 -->
+	<link rel="stylesheet" href="reset.css" >
+	<link rel="stylesheet" href="htmleaf-demo.css" >
+
+	<script>
+		$(function(){
+			$('#dowebok').fullpage({
+				anchors:["page1","page2","page3","page4","page5"],
+				menu:".gps",
+				sectionsColor: [],
+				'navigation': true,
+				afterLoad: function(anchorLink, index){
+					if(index=="1"){
+						$("#dowebok .section .one").animate({ top:"30px"},2000 );
+						$("#dowebok .section .one1").animate({ right:"80px"},2000 );
+					}
+				},
+				onLeave: function(index, direction){
+					if(index=="1"){
+						$("#dowebok .section .one").css({ top:"-60px"});
+						$("#dowebok .section .one1").css({ right:"-80px"});
+					}
+					
+				}
+			
+			});
+			
+		});
+	</script>
+</head>
+
+<body>
+	<div class="gps">
+		<ul>
+			<div class="logo">
+				<p>LOGO</p>
+			</div>
+			<li data-menuanchor="page1" class="active"><a href="#page1">主页</a></li>
+			<li data-menuanchor="page2"><a href="#page2">简约</a></li>
+			<li data-menuanchor="page3"><a href="#page3">细节</a></li>
+			<li data-menuanchor="page4"><a href="#page4">风格</a></li>
+			<li data-menuanchor="page5"><a href="#page5">创意</a></li>
+		</ul>
+	</div>
+
+<div id="dowebok">
+<!-- 第一页 -->
+	<div class="section" style="background:url(imgs/1.jpg) no-repeat; background-size:100%">
+			<h3 class="one">home decoration</h3>
+			<p class="one1" style="font-size: 40px; position: absolute; top: 80%;margin-top: -50px; width:40px; line-height: 50px; right:-80px;color:#993300;" >暖<br/>巢</p>
+	</div>
+
+
+<!-- 第二页 -->
+	<div class="section" style="background:url(imgs/7.jpg) no-repeat; background-size:100%">
+		<div class="friend">
+		    <div class="mr_frbox">
+		        <img class="mr_frBtnL prev" src="imgs/mfrl.gif" />
+		        <div class="mr_frUl">
+		            <ul id="mr_fu">
+		                <li><a href="#">
+		                    <img src="imgs/8.jpg" />
+		                </a>
+		                    <div class="mr_zhe">
+		                        <div class="mr_zhe_i">
+		                            <h1>
+		                                H</h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不代表乏味</span>warm and sweet</h3>
+		                            </div>
+		                        </div>
+		                        <div class="mr_zhe_hover">
+		                            <h1>
+		                                <img src="imgs/plus.gif"></h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不等于简单</span>它是经过深思熟虑后经过创新得出的设计和思路的延展，不是简单的“堆砌”和平淡的“摆放”。</h3>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </li>
+		                <li><a href="#">
+		                    <img src="imgs/9.jpg" />
+		                </a>
+		                    <div class="mr_zhe">
+		                        <div class="mr_zhe_i">
+		                            <h1>
+		                                O</h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不代表乏味</span>warm and sweet</h3>
+		                            </div>
+		                        </div>
+		                        <div class="mr_zhe_hover">
+		                            <h1>
+		                                <img src="imgs/plus.gif"></h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不等于简单</span>简约的背后也体现一种现代“消费观”。即注重生活品位、注重健康时尚、注重合理节约科学消费。</h3>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </li>
+		                <li><a href="#">
+		                    <img src="imgs/10.jpg" />
+		                </a>
+		                    <div class="mr_zhe">
+		                        <div class="mr_zhe_i">
+		                            <h1>
+		                                M</h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不代表乏味</span>warm and sweet</h3>
+		                            </div>
+		                        </div>
+		                        <div class="mr_zhe_hover">
+		                            <h1>
+		                                <img src="imgs/plus.gif"></h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不等于简单</span>以简洁的表现形式来满足人们对空间环境那种感性的、本能的和理性的需求，这是当今国际社会流行的设计风格——简洁明快的简约主义。</h3>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </li>
+		                <li><a href="#">
+		                    <img src="imgs/11.jpg" />
+		                </a>
+		                    <div class="mr_zhe">
+		                        <div class="mr_zhe_i">
+		                            <h1>
+		                                E</h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不代表乏味</span>warm and sweet</h3>
+		                            </div>
+		                        </div>
+		                        <div class="mr_zhe_hover">
+		                            <h1>
+		                                <img src="imgs/plus.gif"></h1>
+		                            <div class="mr_zhe_p">
+		                                <h3>
+		                                    <span>简约不等于简单</span>简约中求艺术，化繁为简，以宁缺勿滥为精髓，合理的简化居室，从简单舒适中体现生活的精致。</h3>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </li>
+		            </ul>
+		        </div>
+		        <img class="mr_frBtnR next" src="imgs/mfrr.gif" />
+		    </div>
+		</div>
+	</div>
+
+<!-- 第三页 -->
+	<div class="section" style="background-color:#FAEBD7">
+		
+		<div id="item1" class="sHoverItem" >
+				<img id="img1" src="imgs/01.jpg">
+				<span id="intro1" class="sIntro" >
+						<h2>Flowers</h2>
+						<p>把自然气息带回家<br/>室内植物对你颇有益处，它们可以增加幸福感、清洁空气和让你足不出户即可亲近自然。</p>
+						<button>HARBOUR</button>
+				</span>
+		</div>
+
+		<div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/02.jpg">
+				<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 留一盏灯说晚安 <br/> 在躁动的城市里保持一颗宁静的心，在每个夜幕降临的晚上，看一个故事，听一首美丽的歌，吃一餐暖胃的晚饭，在充满烟火气的平凡的夜里，道一声：亲爱的晚安！</p>
+					<button>HARBOUR</button>
+				</span>
+		</div>
+		<div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/03.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 小空间住宅的储物创意 <br/>小空间的好处，就是让家庭成员更为亲近。必须让这个房间物尽其能，灵活运用。（真的可以，就这么神奇！）</p>
+					<button>HARBOUR</button>
+				</span>
+		</div>
+		<div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/04.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p>打造可放松的阳台 <br/>如果阳台可以用来尽情放松，还有何求呢？这些舒适的开放式长凳，可以提供足够的空间，用来摆放闲置的靠垫、枕头和沙发罩等。</p>
+					<button>HARBOUR</button>
+				</span>
+		</div><div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/05.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 利用可回收物<br/>升级改造你的可回收物，将它们变成时尚的家居储物件。塑料盛具、金属罐、鞋盒、玻璃罐、木塞，甚至一些破损的小物件都能发挥新功用。你需要的就是一点颜料、胶水、螺丝和创意！ </p>
+					<button>HARBOUR</button>
+				</span>
+		</div><div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/06.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 午后的舒适 <br/>如果你喜欢捧一本好书，尽情享受阳台上的静谧时光，打造这样一块私密幽静的角落再合适不过了。 </p>
+					<button>HARBOUR</button>
+				</span>
+		</div><div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/07.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 新家，全新的开始 <br/>生活总能带给我们许多惊喜，有时我们会在意想不到的地方落地生根。比如独自一人在全新的小家中生活。小家经过改装和升级往往能带来意想不到的惊喜。  </p>
+					<button>HARBOUR</button>
+				</span>
+		</div><div id="item1" class="sHoverItem">
+				<img id="img1" src="imgs/08.jpg">
+					<span id="intro1" class="sIntro">
+						<h2>Flowers</h2>
+							<p> 打造自己的空间 <br/>悬挂一条遮光帘，即使你的室友仍在活动，你也可以舒适地入睡。 </p>
+					<button>HARBOUR</button>
+				</span>
+		</div>
+</div>
+
+<!-- 第四页 -->
+	<div class="section">
+			<div class="slider__warpper">
+				<div class="flex__container flex--pikachu flex--active" data-slide="1">
+				    <div class="flex__item flex__item--left">
+
+				      <div class="flex__content">
+				        <h1 class="text--big">现代派</h1>
+
+				      </div>
+
+				      <p class="text__background">Modern</p>
+				    </div>
+
+				    <div class="flex__item flex__item--right"></div>
+					<!--图片-->
+				    <img class="pokemon__img" src="imgs/xian1.jpg" />
+				</div>
+
+				
+				<div class="flex__container flex--blaziken animate--start" data-slide="2">
+				    <div class="flex__item flex__item--left">
+
+				      <div class="flex__content">
+				        <h1 class="text--big">田园派</h1>
+				      </div>
+
+				      <p class="text__background">Countryside</p>
+				    </div>
+
+				    <div class="flex__item flex__item--right"></div>
+					<!--图片-->
+				    <img class="pokemon__img" src="imgs/tian1.jpg" />
+				</div>
+
+				<div class="flex__container flex--piplup animate--start" data-slide="3">
+				    <div class="flex__item flex__item--left">
+
+				      <div class="flex__content">
+				        <h1 class="text--big">时尚派</h1>
+				      </div>
+
+				      <p class="text__background">Fashion</p>
+				    </div>
+
+				    <div class="flex__item flex__item--right"></div>
+					<!--图片-->
+				    <img class="pokemon__img" src="imgs/shi1.jpg" />
+				</div>
+
+
+				<div class="flex__container flex--dialga animate--start" data-slide="4">
+				    <div class="flex__item flex__item--left">
+
+				      <div class="flex__content">
+				        <h1 class="text--big">简约派</h1>
+				      </div>
+
+				      <p class="text__background">Simple</p>
+				    </div>
+
+				    <div class="flex__item flex__item--right"></div>
+					<!--图片-->
+				    <img class="pokemon__img" src="imgs/jian1.jpg" />
+				</div>
+
+				<div class="flex__container flex--zekrom animate--start" data-slide="5">
+				    <div class="flex__item flex__item--left">
+
+				      <div class="flex__content">
+				        <h1 class="text--big">活力派</h1>
+				      </div>
+
+				      <p class="text__background">Vitality</p>
+				    </div>
+
+				    <div class="flex__item flex__item--right"></div>
+					<!--图片-->
+				    <img class="pokemon__img" src="imgs/di1.jpg" />
+				</div>
+			</div>
+			<!--幻灯片导航按钮--> 
+				<div class="slider__navi">
+				  <a href="#" class="slide-nav active" data-slide="1">pikachu</a>
+				  <a href="#" class="slide-nav" data-slide="2">piplup</a>
+				  <a href="#" class="slide-nav" data-slide="3">blaziken</a>
+				  <a href="#" class="slide-nav" data-slide="4">dialga</a>
+				  <a href="#" class="slide-nav" data-slide="5">zekrom</a>
+				</div> 
+			</div>
+ 
+<!-- 第五页 -->
+<div class="section" style="background-color: #ECF5FF">
+	<div class="five">
+		<img class="" src="imgs/1.gif" />
+		<img class="" src="imgs/2.gif" />
+		<img class="" src="imgs/3.gif" />
+		
+	</div>
+</div>
+
+</body>
+</html>
+
+<!-- 第一页 -->
+	<script type="text/javascript">
+		$("#dowebok>.section>.one").animate({ top:"30px"},2000 );
+		$("#dowebok>.section>.one1").animate({ right:"80px"},2000 );
+	</script>
+<!-- 第二页 -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+	     
+	    /*图片滚动效果*/
+
+	    $(".mr_frbox").slide({
+	        titCell: "",
+	        mainCell: ".mr_frUl ul",
+	        // autoPage: true,
+	        effect: "leftLoop",
+	        // autoPlay: true,
+	        vis: 4
+	    }); 
+
+	    /* 鼠标悬停图片效果 */ 
+	    $(".mr_zhe_hover").css("top", $('.mr_zhe').eq(0).height());
+	    $("li").mouseout(function (e) {
+	        if ((e.pageX < $(this).offset().left || e.pageX > ($(this).offset().left + $(this).width())) || (e.pageY < $(this).offset().top || e.pageY > ($(this).offset().top + $(this).height()))) {
+	            $(this).find('.mr_zhe_i').show();
+	            $(this).find('.mr_zhe_hover').hide().stop().animate({ top: '190px' }, { queue: false, duration: 190 });
+	            return false;
+	        }
+	 
+	    });
+	    $('.mr_zhe').mouseover(function (event) {
+	        $(this).find('.mr_zhe_i').hide();
+	        $(this).find('.mr_zhe_hover').show().stop().animate({ top: '190px' }, { queue: false, duration: 190 });
+	        return false;
+	    });
+	     
+	});
+	</script>
+
+<!-- 第三页 -->
+	<script type="text/javascript">
+		var a=new sHover("sHoverItem","sIntro");
+			a.set({
+				slideSpeed:7,/*滑动速度*/
+				opacityChange:true,/*是否淡入淡出*/
+				opacity:80/*透明度*/
+			});
+	</script>
+
+<!-- 第四页 -->
+	<script type="text/javascript">
+		// $('.slide-nav').find('flex--pikachu').addClass('active');
+		$('.slide-nav').on('click', function(e) {
+			  e.preventDefault();
+			  // get current slide
+			  
+			  var current = $('.flex--active').data('slide'),
+			    // get button data-slide
+			    
+			    next = $(this).data('slide');
+			    console.log(current,next);
+			 
+			  $('.slide-nav').removeClass('active');
+			  $(this).addClass('active');
+			 
+			  if (current === next) {
+			    return false;
+			  } else {
+			    $('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
+			    $('.flex--active').addClass('animate--end');
+			    setTimeout(function() {
+			      $('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
+			      $('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
+			    }, 300);
+			  }
+		}); 
+	</script>                   

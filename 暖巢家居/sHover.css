@@ -1,0 +1,20 @@
+
+/*--------------------------------*/
+.sHoverItem{ width: 300px; height: 280px;  margin-left:25px; float: left; font-family: "arial"; border: 6px solid #ccc;}
+.sIntro{background-color: rgb(235,137,112); text-align: center; font-family: "arial";}
+.container{width: 1168px; height: 636px; border:solid 1px #ddd; margin: 20px auto; background:powderblue; }
+.sHoverItem img{height:280px; width:300px;}
+/*.sHoverItem span{ background-color:rgba(	0,0,0,0.7); }*/
+
+.sIntro h2{font-family: "arial"; font-size:36px; text-align: center; color: #FFF; border-bottom: 1px dashed #fff;margin:0px 20px; padding:20px;}
+.sIntro p{font-size:15px; text-align: center; color: #FFF; margin:0px 10px; padding: 10px; color:#8B0000; line-height:20px;}
+.sIntro button{font-family: "arial"; font-size:18px; color: white;  background-color:	#DC143C; border:none; border-radius: 10px; padding:4px 10px; }
+/*---------------------------------*/
+.footer{min-height: 300px; margin-top:50px; background:#FFBEBE; padding-bottom: 50px; text-align: center;}
+.footer h1{font-size: 60px; color: white; margin:0; padding-top:50px; text-align: center; text-shadow:0 3px 5px #888;}
+.footer h2{text-align: center; padding:10px 0 0; color:#2D8AB1; }
+.footer h3{text-align: center; padding:0px; color:#555; font-weight: normal; }
+#gitHubIcon{width: 90px;height: 90px;}
+.downloadBtn button{padding:8px; font-size: 18px; color:#26677B; font-weight: bold; font-family: "Arial"; background:powderblue; border:none; border-radius: 10px; border-bottom:4px solid #62CBD8}
+.downloadBtn button:hover{background:#99E1FF;}
+.downloadBtn a{font-weight: bold; font-family: "Arial"; font-size: 18px; text-decoration: none; color:#26677B;}
